@@ -1,13 +1,13 @@
 public String whichTwo(Integer a, Integer b, Integer c) {
     //code here
-    String temp;
+    String temp = '';
 
     if((a + b) == c){
-        temp = c;
+        temp += c;
     } else if((a + c) == b){
-        temp = b;
+        temp += b;
     } else if((b + c) == a){
-        temp = a;
+        temp += a;
     } else
         temp = '';
 
