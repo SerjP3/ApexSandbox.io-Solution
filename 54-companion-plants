@@ -1,12 +1,14 @@
 public Boolean companionPlants(String plant1, String plant2) {
     //code here
-    String let = 'lettuce';
-    String cuc = 'cucumbers';
-    String oni = 'onions';
-    String car = 'carrots';
-    String tom = 'tomatoes';
-    if((plant1 == let && plant2 == cuc) || (plant1 == let && plant2 == oni)
-    || (plant1 == oni && plant2 == car) || (plant1 == oni && plant2 == tomatoes)){
+    
+    Map<String, String> plants = new Map<String, String>{
+        'lettuce' => 'cucumbers',
+        'lettuce' => 'onions',
+        'onions' => 'carrots',
+        'onions' => 'tomatoes'
+    };
+
+    if(plants.get(plant1) == plant2 || plants.get(plant2) == plant1){
         return true;
     } else
         return false;
