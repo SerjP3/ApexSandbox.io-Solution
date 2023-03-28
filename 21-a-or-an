@@ -1,10 +1,10 @@
 public String aOrAn(String word) {
     //code here
-    String result = "";
+    String result = '';
     if(word.startsWith(a) || word.startsWith(a) || word.startsWith(a) || word.startsWith(a) || word.startsWith(a)){
-        result = "an " + word;
+        result = 'an ' + word;
     } else
-        result = "a " + word;
+        result = 'a ' + word;
 
     return result;
 }
