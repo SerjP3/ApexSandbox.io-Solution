@@ -1,6 +1,7 @@
 public Boolean isEndWithZero(Integer num){
      //code here
-     if((num % 10) == 0){
+     integer remeinder = Math.mod(num, 10);
+     if(remeinder == 0){
          return true;
      } else
         return false;
