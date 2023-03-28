@@ -13,6 +13,6 @@ public String changeTimeFormat(String strTime) {
     } else{
         intHours -= 12;
         hours = String.valueOf(intHours).leftPad(2, '0');
-        return hours + ':' + minutes + ' AM';
+        return hours + ':' + minutes + ' PM';
     }
 }
