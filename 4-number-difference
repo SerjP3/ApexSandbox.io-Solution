@@ -1,6 +1,6 @@
 public Integer diff(Integer a, Integer b) {
     //code here
-    integer substract = a - b;
+    integer substract = Math.abs(a - b);
 
     return substract;
 }
