@@ -1,8 +1,8 @@
 public Boolean isBirthday(Contact c) {
     //code here
 
-    String dateOfBirth = c.Birthdate.format();
-    String today = Date.today().format();
+    String dateOfBirth = (c.Birthdate.month() + c.Birthdate.day()).format();
+    String today = (Date.today().month() + Date.today().day()).format();
     if(dateOfBirth == today){
         return true;
     }
