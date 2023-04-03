@@ -1,0 +1,8 @@
+public Boolean isBirthday(Contact c) {
+    //code here
+    if(c.Birthdate = Date.Today().format()){
+        return true;
+    }
+
+    return false;
+}
