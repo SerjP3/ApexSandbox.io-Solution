@@ -5,7 +5,7 @@ public void enrollStudents(List<String> emails, String className) {
     List<apxio__Class_Enrollment__c> clsEns = new List<apxio__Class_Enrollment__c>();
     apxio__Class_Enrollment__c clsEn = new apxio__Class_Enrollment__c();
     for(integer i = 0; i < emails.size(); i++){
-        students = [Select Id, Name From apxio__Student__c Where apxio__Email__c =: emails[i]];
+        students = [Select Id, Name, apxio__Email__c From apxio__Student__c Where apxio__Email__c =: emails[i]];
         clsEn.apxio__Student__c = students[i].apxio__Email__c;
         clsEns.add(clsEn);
     }
