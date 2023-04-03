@@ -7,5 +7,5 @@ public String registerStudent(String name, String phone, String email) {
     List<apxio__Student__c> students = [Select Id, apxio__Registration_Number__c 
     From apxio__Student__c Where Name Like :name];
 
-    return students.apxio__Registration_Number__c;
+    return students[0].apxio__Registration_Number__c;
 }
