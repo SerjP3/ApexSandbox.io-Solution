@@ -2,7 +2,7 @@ public List<apxio__Student__c> selectStudentsWithoutContactInfo() {
     // code here
 
     List<apxio__Student__c> students = [Select Id, Name From apxio__Student__c
-    Whre apxio__Active__c = True AND (apxio__Email__c = null OR apxio__Phone__c = null)
+    Where apxio__Active__c = True AND (apxio__Email__c = null OR apxio__Phone__c = null)
     Order By Name];
 
     return students;
