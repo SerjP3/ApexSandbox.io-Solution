@@ -1,19 +1,18 @@
 public void enrollStudents(List<String> emails, String className) {
     // code here
-    List<apxio__Student__c> students = new List<apxio__Student__c>();
-    List<apxio__Class__c> clss = new List<apxio__Class__c>();
-    List<apxio__Class_Enrollment__c> clsEns = new List<apxio__Class_Enrollment__c>();
-    apxio__Class_Enrollment__c clsEn = new apxio__Class_Enrollment__c();
-    for(integer i = 0; i < emails.size(); i++){
-        students = [Select Id, Name, apxio__Email__c From apxio__Student__c Where apxio__Email__c =: emails[i]];
-        clsEn.apxio__Student__c = students[i].apxio__Email__c;
-        clsEns.add(clsEn);
+    List<apxio__Class_Enrollment__c> ens = new List<apxio__Class_Enrollment__c>();
+    List<apxio__Student__c> students = [Select Id, Name, apxio__Email__c From apxio__Student__c
+                                        Where apxio__Email__c In :emails];
+    List<apxio__Class__c> clss = [Select Id, Name From apxio__Class__c
+                                    Where Name =: className];
+    
+    for(integer i = 0; i < students.size(); i++){
+        apxio__Class_Enrollment__c en = new apxio__Class_Enrollment__c();
+        en.apxio__Student__c = students[i].Id;
+        en.apxio__Offered_Class__c = clss[0].Id;
+        ens.add(en);
     }
 
-        clss = [Select Id, Name From apxio__Class__c Where Name =: className];
-        clsEn.apxio__Offered_Class__c = clss[0].Name;
-        clsEns.add(clsEn);
-
-    insert clsEns;
+    insert ens;
 
 }
