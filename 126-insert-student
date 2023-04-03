@@ -3,5 +3,6 @@ public Id insertStudent(String name, String email) {
     apxio__Student__c student = new apxio__Student__c(Name = name,
     apxio__Email__c = email);
     insert student;
-    return student.Id;
+    List[apxio__Student__c] students = [Select Id, Name, apxio__Student__c From apxio__Student__c Where Name Like :name];
+    return students[0].Id;
 }
