@@ -2,7 +2,7 @@ public Boolean isBirthday(Contact c) {
     //code here
 
     String dateOfBirth = c.Birthdate.format();
-    String today = System.today.format();
+    String today = Date.today.format();
     if(dateOfBirth == today){
         return true;
     }
