@@ -2,7 +2,7 @@ public List<apxio__Student__c> selectActiveStudents() {
     // code here
 
     List<apxio__Student__c> students = [Select Id, Name From apxio__Student__c
-    Where apxio__Active__c = True && Id != null && Name != null];
+    Where apxio__Active__c = True];
 
     return students;
 }
