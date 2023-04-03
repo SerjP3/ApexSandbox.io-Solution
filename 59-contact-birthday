@@ -1,6 +1,6 @@
 public Boolean isBirthday(Contact c) {
     //code here
-    if(c.Birthdate = Date.Today().format()){
+    if(c.Birthdate = String.valueOf(Date.Today().format())){
         return true;
     }
 
