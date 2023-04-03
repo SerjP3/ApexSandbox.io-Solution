@@ -13,7 +13,6 @@ public void enrollStudents(List<String> emails, String className) {
         clss = [Select Id, Name From apxio__Class__c Where Name =: className];
         clsEn.apxio__Offered_Class__c = clss[0].Name;
         clsEns.add(clsEn);
-    
 
     insert clsEns;
 
