@@ -10,7 +10,7 @@ public void enrollStudents(List<String> emails, String className) {
         clsEns.add(clsEn);
     }
 
-    for(integer i = 0; i < className; i++){
+    for(integer i = 0; i < className.size(); i++){
         clss = [Select Id, Name From apxio__Class__c Where Name =: className[i]];
         clsEn.apxio__Offered_Class__c = clss[i].Name;
         clsEns.add(clsEn);
